@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "941588850444",
+    "project_id": "authen-tech-4cb35",
+    "storage_bucket": "authen-tech-4cb35.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941588850444:android:c7e9f5d4aa5a1211c8cb29",
+        "android_client_info": {
+          "package_name": "com.authentech.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwxd8GL03IYvlg2q-1oBhyJkTcz7U9TiA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

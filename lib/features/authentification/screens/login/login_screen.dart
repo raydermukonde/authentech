@@ -1,9 +1,10 @@
+import 'package:authentech/common_widget/form/form_header_widget.dart';
+import 'package:authentech/features/authentification/screens/login/login_footer_widget.dart';
+import 'package:authentech/utils/constants/image_strings.dart';
+import 'package:authentech/utils/constants/sizes.dart';
+import 'package:authentech/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
-import 'package:myapp/common_widget/form/form_header_widget.dart';
-import 'package:myapp/features/authentification/screens/login/login_footer_widget.dart';
-import 'package:myapp/utils/constants/image_strings.dart';
-import 'package:myapp/utils/constants/sizes.dart';
-import 'package:myapp/utils/constants/text_strings.dart';
+
 
 
 

@@ -1,13 +1,15 @@
-import 'package:Broke_a_fintech_app/src/features/authentification/controllers/user_controller.dart';
-import 'package:Broke_a_fintech_app/src/features/core/screens/profile/profile_screen.dart';
-import 'package:Broke_a_fintech_app/src/repository/authentication_repository/user_repository/user_repository.dart';
-import 'package:Broke_a_fintech_app/src/utils/constants/image_strings.dart';
+
+import 'package:authentech/common_widget/loaders/loaders.dart';
+import 'package:authentech/features/authentification/controllers/user_controller.dart';
+import 'package:authentech/features/core/screens/home.dart';
+import 'package:authentech/repository/authentiction_repository/users_repository/user_repository.dart';
+import 'package:authentech/utils/constants/image_strings.dart';
 // ignore: unused_import
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../common_widgets/loaders/loaders.dart';
+
 import '../../../utils/helpers/network_manager.dart';
 import '../../../utils/popups/full_screen_loader.dart';
 
@@ -40,7 +42,7 @@ Future<void> updateUserName() async {
   try {
      //Start Loading
     TFullScreenLoader.openLoadingDialog(
-        'We are updating your information', TImages.waitingImage);
+        'We are updating your information', MtImages.waitingImage);
 
       // Check Internet Connectivity
       final isConnected = await NetworkManager.instance.isConnected();
@@ -73,7 +75,7 @@ Future<void> updateUserName() async {
 
   // Move to previous screen
 
-  Get.off(() => const ProfileScreen());
+  Get.off(() => HomePage());
 } catch (e) {
   TFullScreenLoader.stopLoading();
   TLoaders.errorSnackBar(

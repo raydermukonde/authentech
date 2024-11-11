@@ -1,9 +1,10 @@
 
 
+import 'package:authentech/features/authentification/models/model_on_boarding.dart';
+import 'package:authentech/utils/constants/sizes.dart';
+import 'package:authentech/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:myapp/features/authentification/models/model_on_boarding.dart';
-import 'package:myapp/utils/constants/sizes.dart';
-import 'package:myapp/utils/helpers/helper_functions.dart';
+
 
 class OnBordingPageWidget extends StatelessWidget {
   const OnBordingPageWidget({
@@ -15,7 +16,6 @@ class OnBordingPageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return Container(
       padding: const EdgeInsets.all(TSize.tDefaultSize),
       color: model.bgColor,

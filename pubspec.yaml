@@ -1,58 +1,37 @@
 name: authentech
-description: "scannez vos documents"
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+description: "Scannez vos documents"
 
-# The following defines the version and build number for your application.
-# A version number is three numbers separated by dots, like 1.2.43
-# followed by an optional build number separated by a +.
-# Both the version and the builder number may be overridden in flutter
-# build by specifying --build-name and --build-number, respectively.
-# In Android, build-name is used as versionName while build-number used as versionCode.
-# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
-# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
-# Read more about iOS versioning at
-# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-# In Windows, build-name is used as the major, minor, and patch parts
-# of the product and file versions while build-number is used as the build suffix.
+# Prevents accidental publication to pub.dev
+publish_to: 'none' 
+
+# Versioning for the application
 version: 1.0.0+1
 
 environment:
   sdk: ^3.5.3
 
-# Dependencies specify other packages that your package needs in order to work.
-# To automatically upgrade your package dependencies to the latest versions
-# consider running `flutter pub upgrade --major-versions`. Alternatively,
-# dependencies can be manually updated by changing the version numbers below to
-# the latest version available on pub.dev. To see which dependencies have newer
-# versions available, run `flutter pub outdated`.
 dependencies:
   flutter:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
   flutter_gen: ^5.5.0+1
-  
-  
 
- # Utility Packages
+  # Utility Packages
   flutter_native_splash: ^2.4.0
   lottie: ^3.1.2
   connectivity_plus: ^5.0.1
   image_picker: ^1.1.2
   shimmer: ^3.0.0
 
- # Icons
-  
+  # Icons
   cupertino_icons: ^1.0.6
   line_awesome_flutter: ^2.0.0
   iconsax: ^0.0.8
   google_fonts: ^6.2.1
-  
 
   # State Management
-  get:
+  get: ^4.6.5
   get_storage: ^2.1.1
   liquid_swipe: ^3.1.0
   smooth_page_indicator: ^1.1.0
@@ -63,12 +42,10 @@ dependencies:
 
   # Network Packages
   http: ^1.1.0
-  
   logger: ^2.3.0
   url_launcher: ^6.2.6
-  
 
-# Firebase Packages
+  # Firebase Packages
   firebase_core: ^2.30.1
   firebase_auth: ^4.19.4
   cloud_firestore: ^4.17.2
@@ -76,96 +53,70 @@ dependencies:
   share: ^2.0.4
   google_sign_in: ^6.2.1
 
-  # field
+  # Field Input Packages
   pinput: ^4.0.0
   intl_phone_field: ^3.2.0
   cached_network_image: ^3.3.1
-  flutter_launcher_icons: ^0.13.1
-  flutter_gen_runner: ^5.5.0+1
+
+  # Code generation and localization
   intl: any
   build_runner: ^2.4.11
-  
-  
-  
-
-
-
-  #------------------Dev_Dependencies------------------#
-
+  flutter_launcher_icons: ^0.13.1
+  flutter_gen_runner: ^5.5.0+1
 
 dev_dependencies:
-
   flutter_test:
     sdk: flutter
-  change_app_package_name: ^1.1.0  
+  change_app_package_name: ^1.1.0
   flutter_rename_app_plus3: ^1.2.4
+  flutter_lints: ^3.0.0
 
 flutter_rename_app_plus3:
   application_name: Authen-tech
 
-  
-  flutter_lints: ^3.0.0
 flutter_native_splash:
- color: "#FFFFFF"
- color_dark: "#121212"
- image: assets/logos/Base 1024X1024.png
- image_dark: assets/logos/Base 1024X1024.png
-
- android_12:
+  color: "#FFFFFF"
+  color_dark: "#121212"
+  image: assets/logos/Base 1024X1024.png
+  image_dark: assets/logos/Base 1024X1024.png
+  android_12:
     color: "#FFFFFF"
-    color_dark: "#121212" 
+    color_dark: "#121212"
     image: assets/logos/Base 1024X1024.png
     icon_background_color: "#ffffff"
     image_dark: assets/logos/Base 1024X1024.png
     icon_background_color_dark: "#121212"
-
- web: false  
-
- 
-  
+  web: false
 
 flutter:
   uses-material-design: true
-  
   generate: true
 
-  
-
-
-  #--------------- Local Assets --------------------#
-
+  # Local Assets
   assets:
-    
     - assets/images/
-
     - assets/images/on_boarding_images/
-
     - assets/logos/
     - assets/images/profil/Chek iD.png
 
-
-     
-
-
-  #--------------- Fonts --------------------#
-
+  # Fonts
   fonts:
     - family: Poppins
       fonts:
-       - asset: assets/fonts/Poppins-Light.ttf
-         weight: 300
-       - asset: assets/fonts/Poppins-Regular.ttf
-         weight: 400
-       - asset: assets/fonts/Poppins-Italic.ttf
-         style: italic
-       - asset: assets/fonts/Poppins-Medium.ttf
-         weight: 500
-       - asset: assets/fonts/Poppins-MediumItalic.ttf
-         weight: 500
-         style: italic
-       - asset: assets/fonts/Poppins-SemiBold.ttf
-         weight: 600
-       - asset: assets/fonts/Poppins-Bold.ttf
-         weight: 800
-       - asset: assets/fonts/Poppins-Black.ttf
-         weight: 900
+        - asset: assets/fonts/Poppins-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Poppins-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 800
+        - asset: assets/fonts/Poppins-Black.ttf
+          weight: 900

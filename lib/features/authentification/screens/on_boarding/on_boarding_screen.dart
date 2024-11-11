@@ -1,10 +1,11 @@
 
+import 'package:authentech/features/authentification/controllers/on_boarding_controller.dart';
+import 'package:authentech/features/authentification/screens/on_boarding/widget/on_boarding_next_button.dart';
+import 'package:authentech/utils/constants/image_strings.dart';
+import 'package:authentech/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:myapp/features/authentification/controllers/on_boarding_controller.dart';
-import 'package:myapp/features/authentification/screens/on_boarding/widget/on_boarding_next_button.dart';
-import 'package:myapp/utils/constants/image_strings.dart';
-import 'package:myapp/utils/constants/text_strings.dart';
+
 
 import 'widget/on_boarding_dot_navigation.dart';
 import 'widget/on_boarding_page.dart';

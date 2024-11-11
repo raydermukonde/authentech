@@ -1,9 +1,12 @@
-import 'package:Broke_a_fintech_app/src/common_widgets/loaders/loaders.dart';
-import 'package:Broke_a_fintech_app/src/features/authentification/screens/password_configuration/reset_password.dart';
-import 'package:Broke_a_fintech_app/src/repository/authentication_repository/authentication_repository.dart';
-import 'package:Broke_a_fintech_app/src/utils/constants/image_strings.dart';
-import 'package:Broke_a_fintech_app/src/utils/helpers/network_manager.dart';
-import 'package:Broke_a_fintech_app/src/utils/popups/full_screen_loader.dart';
+
+import 'package:authentech/common_widget/loaders/loaders.dart';
+import 'package:authentech/features/authentification/screens/password_configuration/reset_password.dart';
+import 'package:authentech/repository/authentiction_repository/authentication_repository.dart';
+
+import 'package:authentech/utils/constants/image_strings.dart';
+import 'package:authentech/utils/helpers/network_manager.dart';
+
+import 'package:authentech/utils/popups/full_screen_loader.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -19,7 +22,7 @@ GlobalKey<FormState> forgetPasswordFormKey = GlobalKey<FormState>();
   sendPasswordResetEmail() async {
     try{
       // start loading
-      TFullScreenLoader.openLoadingDialog('Processing your request...', TImages.docerAnimation);
+      TFullScreenLoader.openLoadingDialog('Processing your request...', MtImages.docerAnimation);
       // Check Internet Connection
       final isConnected = await NetworkManager().isConnected();
 // Suggested code may be subject to a license. Learn more: ~LicenseLog:1327351868.
@@ -50,7 +53,7 @@ GlobalKey<FormState> forgetPasswordFormKey = GlobalKey<FormState>();
   resendPasswordEmail(String email) async {
     try{
        // start loading
-      TFullScreenLoader.openLoadingDialog('Processing your request...', TImages.docerAnimation);
+      TFullScreenLoader.openLoadingDialog('Processing your request...', MtImages.docerAnimation);
       // Check Internet Connection
       final isConnected = await NetworkManager().isConnected();
 // Suggested code may be subject to a license. Learn more: ~LicenseLog:1327351868.

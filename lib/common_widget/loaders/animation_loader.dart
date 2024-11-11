@@ -1,6 +1,7 @@
+import 'package:authentech/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:myapp/utils/constants/sizes.dart';
+
 
 import '../../utils/constants/colors.dart';
 

@@ -1,11 +1,12 @@
 
 import 'dart:async';
 
-import 'package:Broke_a_fintech_app/src/common_widgets/loaders/loaders.dart';
-import 'package:Broke_a_fintech_app/src/common_widgets/success_screen/success_screen.dart';
-import 'package:Broke_a_fintech_app/src/repository/authentication_repository/authentication_repository.dart';
-import 'package:Broke_a_fintech_app/src/utils/constants/image_strings.dart';
-import 'package:Broke_a_fintech_app/src/utils/constants/text_strings.dart';
+
+import 'package:authentech/common_widget/loaders/loaders.dart';
+import 'package:authentech/common_widget/success_screen/success_screen.dart';
+import 'package:authentech/repository/authentiction_repository/authentication_repository.dart';
+import 'package:authentech/utils/constants/image_strings.dart';
+import 'package:authentech/utils/constants/text_strings.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 
@@ -40,9 +41,9 @@ class VerifyEmailController extends GetxController {
   if (user?.emailVerified ?? false) {
     timer.cancel();
     Get.off(() => SuccessScreen(
-      image: TImages.successfullyRegistration, 
-      title: TTexts.yourAccountCreatedTitle, 
-      subtitle: TTexts.yourAccountCreatedSubTitle, 
+      image: MtImages.successfullyRegistration, 
+      title: MtTexts.yourAccountCreatedTitle, 
+      subtitle: MtTexts.yourAccountCreatedSubTitle, 
       onPressed: () => AuthenticationRepository.instance.screenRedirect(),
       ));
   }
@@ -54,9 +55,9 @@ class VerifyEmailController extends GetxController {
     final currentUser = FirebaseAuth.instance.currentUser;
     if (currentUser != null && currentUser.emailVerified) {
       Get.off(() => SuccessScreen(
-      image: TImages.successfullyRegistration, 
-      title: TTexts.yourAccountCreatedTitle, 
-      subtitle: TTexts.yourAccountCreatedSubTitle, 
+      image: MtImages.successfullyRegistration, 
+      title: MtTexts.yourAccountCreatedTitle, 
+      subtitle: MtTexts.yourAccountCreatedSubTitle, 
       onPressed: () => AuthenticationRepository.instance.screenRedirect(),
       ));
     }

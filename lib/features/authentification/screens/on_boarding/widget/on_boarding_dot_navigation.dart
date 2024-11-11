@@ -1,10 +1,11 @@
 
+import 'package:authentech/features/authentification/controllers/on_boarding_controller.dart';
+import 'package:authentech/utils/constants/colors.dart';
+import 'package:authentech/utils/constants/sizes.dart';
+import 'package:authentech/utils/device/device_utility.dart';
+import 'package:authentech/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:myapp/features/authentification/controllers/on_boarding_controller.dart';
-import 'package:myapp/utils/constants/colors.dart';
-import 'package:myapp/utils/constants/sizes.dart';
-import 'package:myapp/utils/device/device_utility.dart';
-import 'package:myapp/utils/helpers/helper_functions.dart';
+
 
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 

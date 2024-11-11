@@ -1,8 +1,8 @@
 
+import 'package:authentech/utils/constants/image_strings.dart';
+import 'package:authentech/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
-import 'package:Broke_a_fintech_app/src/utils/constants/image_strings.dart';
-import 'package:Broke_a_fintech_app/src/utils/constants/text_strings.dart';
-import 'package:myapp/utils/constants/image_strings.dart';
+
 
 class LoginHeaderWidget extends StatelessWidget {
   const LoginHeaderWidget({
@@ -18,9 +18,9 @@ class LoginHeaderWidget extends StatelessWidget {
        crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Image(image: const AssetImage(MtImages.tWelcomeScreenImage), height: size.height * 0.2,),
-        Text(TTexts.tLoginTitle,
+        Text(MtTexts.tLoginTitle,
         style: Theme.of(context).textTheme.displayLarge),
-    Text(TTexts.tLoginSubTitle,
+    Text(MtTexts.tLoginSubTitle,
         style: Theme.of(context).textTheme.bodyLarge),
       ],
     

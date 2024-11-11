@@ -1,13 +1,13 @@
-import 'package:Broke_a_fintech_app/src/features/authentification/screens/password_configuration/forget_password.dart';
-import 'package:Broke_a_fintech_app/src/utils/validators/validation.dart';
+
+import 'package:authentech/features/authentification/screens/password_configuration/forget_password.dart';
+import 'package:authentech/utils/constants/sizes.dart';
+import 'package:authentech/utils/constants/text_strings.dart';
+import 'package:authentech/utils/validators/validation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:Broke_a_fintech_app/src/utils/constants/sizes.dart';
-import 'package:Broke_a_fintech_app/src/utils/constants/text_strings.dart';
+
 import 'package:iconsax/iconsax.dart';
-import 'package:myapp/utils/constants/sizes.dart';
-import 'package:myapp/utils/constants/text_strings.dart';
-import 'package:myapp/utils/validators/validation.dart';
+
 
 import '../../controllers/login_controller.dart';
 

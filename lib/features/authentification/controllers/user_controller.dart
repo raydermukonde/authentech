@@ -1,16 +1,17 @@
-import 'package:Broke_a_fintech_app/src/common_widgets/loaders/loaders.dart';
-import 'package:Broke_a_fintech_app/src/features/authentification/models/user_model.dart';
-import 'package:Broke_a_fintech_app/src/features/core/screens/profile/re_authenticate_user_login_form.dart';
-import 'package:Broke_a_fintech_app/src/repository/authentication_repository/authentication_repository.dart';
-import 'package:Broke_a_fintech_app/src/utils/constants/image_strings.dart';
-import 'package:Broke_a_fintech_app/src/utils/constants/sizes.dart';
-import 'package:Broke_a_fintech_app/src/utils/popups/full_screen_loader.dart';
+
+import 'package:authentech/common_widget/loaders/loaders.dart';
+import 'package:authentech/features/authentification/models/user_model.dart';
+import 'package:authentech/repository/authentiction_repository/authentication_repository.dart';
+import 'package:authentech/repository/authentiction_repository/users_repository/user_repository.dart';
+import 'package:authentech/utils/constants/image_strings.dart';
+import 'package:authentech/utils/constants/sizes.dart';
+import 'package:authentech/utils/popups/full_screen_loader.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
-import '../../../repository/authentication_repository/user_repository/user_repository.dart';
+
 import '../../../utils/helpers/network_manager.dart';
 import '../screens/login/login_screen.dart';
 
@@ -113,7 +114,7 @@ class UserController extends GetxController {
   /// Delete User Account
   void deleteUserAccount() async {
     try {
-      TFullScreenLoader.openLoadingDialog('Processing', TImages.docerAnimation);
+      TFullScreenLoader.openLoadingDialog('Processing', MtImages.docerAnimation);
 
       /// First re-authenticate user
       final auth = AuthenticationRepository.instance;
@@ -126,7 +127,7 @@ class UserController extends GetxController {
         Get.offAll(() => const LoginScreen());
            } else if (provider == 'password') {
             TFullScreenLoader.stopLoading();
-            Get.to(() => const ReAuthLoginForm());
+            Get.to(() => const LoginScreen());
            }
       }
   
@@ -142,7 +143,7 @@ class UserController extends GetxController {
   /// -- RE-Authenticate User
 Future<void> reAuthenticateEmailAndPasswordUser() async {
   try {
-    TFullScreenLoader.openLoadingDialog('Processing', TImages.docerAnimation);
+    TFullScreenLoader.openLoadingDialog('Processing', MtImages.docerAnimation);
 
     // Check internet
     final isConnected = await NetworkManager.instance.isConnected();

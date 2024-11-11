@@ -1,7 +1,8 @@
+import 'package:authentech/features/authentification/screens/login/login_screen.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:Broke_a_fintech_app/src/features/authentification/screens/welcome/welcome_screen.dart';
+
 import 'package:get_storage/get_storage.dart';
 
 class OnBoardingController extends GetxController {
@@ -32,7 +33,7 @@ class OnBoardingController extends GetxController {
     }
     
       storage.write('IsFirstTime', false);
-      Get.offAll(const WelcomeScreen());
+      Get.offAll(const LoginScreen());
     } else {
       currentPageIndex.value++;
       pageController.jumpToPage(currentPageIndex.value);

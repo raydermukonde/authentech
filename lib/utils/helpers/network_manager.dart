@@ -1,8 +1,9 @@
 import 'dart:async';
+import 'package:authentech/common_widget/loaders/loaders.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:myapp/common_widget/loaders/loaders.dart';
+
 
 
 /// Gère le statut de la connectivité réseau et fournit des méthodes pour vérifier et gérer les changements de connectivité.

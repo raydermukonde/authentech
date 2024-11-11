@@ -1,11 +1,13 @@
-import 'package:Broke_a_fintech_app/src/common_widgets/loaders/loaders.dart';
-import 'package:Broke_a_fintech_app/src/utils/constants/image_strings.dart';
-import 'package:Broke_a_fintech_app/src/utils/helpers/network_manager.dart';
-import 'package:Broke_a_fintech_app/src/utils/popups/full_screen_loader.dart';
+
+import 'package:authentech/common_widget/loaders/loaders.dart';
+import 'package:authentech/repository/authentiction_repository/authentication_repository.dart';
+import 'package:authentech/utils/constants/image_strings.dart';
+import 'package:authentech/utils/helpers/network_manager.dart';
+import 'package:authentech/utils/popups/full_screen_loader.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:Broke_a_fintech_app/src/repository/authentication_repository/authentication_repository.dart';
+
 import 'package:get_storage/get_storage.dart';
 
 import 'user_controller.dart';
@@ -33,7 +35,7 @@ class LoginController extends GetxController {
   Future<void> loginUser() async {
     try {
       // Start Loading
-      TFullScreenLoader.openLoadingDialog('Logging in...', TImages.docerAnimation);
+      TFullScreenLoader.openLoadingDialog('Logging in...', MtImages.docerAnimation);
 
       // Check Internet Connectivity
       final isConnected = await NetworkManager.instance.isConnected();
@@ -54,10 +56,6 @@ class LoginController extends GetxController {
       }
 
       // Login user using Email and password Authentication
-      final userCredentials = await AuthenticationRepository.instance.loginWithEmailAndPassword(
-        email.text.trim(),
-        password.text.trim(),
-      );
 
       // Stop Loading
       TFullScreenLoader.stopLoading();
@@ -77,7 +75,7 @@ class LoginController extends GetxController {
   Future<void> googleSignIn() async {
     try {
       // Start Loading
-      TFullScreenLoader.openLoadingDialog('Logging in...', TImages.docerAnimation);
+      TFullScreenLoader.openLoadingDialog('Logging in...', MtImages.docerAnimation);
 
       // Check Internet Connectivity
       final isConnected = await NetworkManager.instance.isConnected();

@@ -1,9 +1,9 @@
 
+import 'package:authentech/utils/constants/colors.dart';
+import 'package:authentech/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:myapp/utils/constants/colors.dart';
-import 'package:myapp/utils/helpers/helper_functions.dart';
 
 class TLoaders {
   static hideSnackBar() =>
